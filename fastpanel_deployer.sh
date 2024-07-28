@@ -39,7 +39,7 @@ for db_archive in "$DB_ARCHIVE_DIR"/*.sql.gz; do
   echo "Створення БД: $DB_NAME"
  
  #Додавання БД в панель
-  /usr/local/fastpanel2/fastpanel databases create --server="localhost" --name="$DB_NAME" --username="$DB_USER" --password="$DB_PASSWORD"
+  /usr/local/fastpanel2/fastpanel databases create --server=1 --name="$DB_NAME" --username="$DB_USER" --password="$DB_PASSWORD"
   
   mysql -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME"
   

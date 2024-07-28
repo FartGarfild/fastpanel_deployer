@@ -41,7 +41,7 @@ for db_archive in "$DB_ARCHIVE_DIR"/*.sql.gz; do
  #Додавання БД в панель
   /usr/local/fastpanel2/fastpanel databases create --server=1 --name="$DB_NAME" --username="$DB_USER" --password="$DB_PASSWORD"
   
-  mysql -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME"
+  zcat "$db_archive" | mysql -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME"
   
  #  Запис паролів в файл
   echo "Database: $DB_NAME, User: $DB_USER, Password: $DB_PASSWORD" >> $DB_PASSWORD_FILE

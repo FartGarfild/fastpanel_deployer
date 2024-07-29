@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Varriables
-SITE_ARCHIVE_DIR="/var/www/fastuser/data/backup/2024.07.27_20-21-28_test_91.247.37.42/"  
+SITE_ARCHIVE_DIR="/var/www/fastuser/data/backup/"  
 DB_ARCHIVE_DIR="$SITE_ARCHIVE_DIR"    
 USER="fastuser"
 
